@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  distDir: 'dist',
   webpack: (config) => {
     // Add support for importing Web Workers
     config.module.rules.push({
@@ -10,7 +12,7 @@ const nextConfig: NextConfig = {
         filename: 'static/[hash][ext][query]',
       },
     });
-    
+
     return config;
   },
 };
