@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000; /* Force full black */
+  --foreground: #ededed;
+  /* L1NE brand colors - solid */
+  --l1ne-purple: #944de6;  /* Logo top color */
+  --l1ne-blue: #3359d9;    /* Logo base color */
+  --l1ne-white: #f2f7ff;   /* Logo diagonal line */
+  /* UI label variables (used for small section titles/badges) */
+  --ui-label-font-size: 0.8rem; /* ~10px, about half of text-lg */
+  --ui-label-line-height: 1.15;
+  --ui-label-py: 0.125rem; /* 2px */
+  --ui-label-px: 0.5rem;   /* 8px */
+  --ui-label-bg: #c79325ff; /* Keep amber/gold for headers */
+  --ui-label-fg: #000000;
+  /* Consistent header row height for section headers */
+  --ui-header-row-height: 28px;
+  /* Row status colors - updated with L1NE colors */
+  --row-done-bg: #1a0d2e;          /* dark purple */
+  --row-done-fg: #944de6;          /* L1NE purple */
+  --row-inprog-bg: #0d1a2e;        /* dark blue */
+  --row-inprog-fg: #3359d9;        /* L1NE blue */
+  --row-queued-bg: #0e1d46;        /* keep original blue */
+  --row-queued-fg: #8aa9cf;        /* keep original */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* Map Tailwind font tokens to Source Code Pro */
+  --font-sans: var(--font-jet-brains-mono);
+  --font-mono: var(--font-jet-brains-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000; /* Full black in dark mode too */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Reusable small title/label style for consistent height */
+.ui-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--ui-label-font-size);
+  line-height: var(--ui-label-line-height);
+  padding: var(--ui-label-py) var(--ui-label-px);
+  background: var(--ui-label-bg);
+  color: var(--ui-label-fg);
+  font-weight: 700; /* use Bold face we loaded */
+}
+
+/* Variant: make it look like a tab sitting on the card border */
+.ui-label--tab {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: -1px; /* overlap the top border for a flush tab look */
+}
+
+/* Tighter horizontal padding (≈2px each side) */
+.ui-label--tight {
+  padding-left: 0.125rem;  /* 2px */
+  padding-right: 0.125rem; /* 2px */
+}
+
+/* Make the label fill the container height */
+.ui-label--fill {
+  height: 100%;
+}
+
+/* Utility to hide scrollbars while enabling scroll */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Table row status helpers */
+.tr-status-done {
+  background-color: var(--row-done-bg) !important;
+  color: var(--row-done-fg) !important;
+}
+.tr-status-inprogress {
+  background-color: var(--row-inprog-bg) !important;
+  color: var(--row-inprog-fg) !important;
+}
+.tr-status-queued {
+  background-color: var(--row-queued-bg) !important;
+  color: var(--row-queued-fg) !important;
+}
