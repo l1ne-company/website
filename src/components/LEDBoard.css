@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+.led-board-wrapper {
+  --duration: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #130f04;
+  border-bottom: 1px solid #352b19;
+}
+
+.board-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.rivets {
+  display: none;
+}
+
+.board {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0;
+  line-height: 1;
+  overflow: hidden;
+  background: #130f04;
+  position: relative;
+}
+
+.board__content {
+  color: #c79325;
+  height: 100%;
+  width: 100%;
+}
+
+.text-track {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  animation: slide calc(var(--duration, 10) * 1s) infinite linear;
+  color: #c79325;
+}
+
+.text {
+  padding-inline: 3rem;
+  width: fit-content;
+  min-width: 100vw;
+  text-align: center;
+}
+
+.text::before {
+  content: '▸';
+  margin-right: 1rem;
+  color: #d79326;
+}
+
+@keyframes slide {
+  to {
+    translate: -50% 0;
+  }
+}

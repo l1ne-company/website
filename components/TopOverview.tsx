@@ -70,18 +70,31 @@ export default function TopOverview({ compact = false, hideCompletion = false }:
 
 function Chart({ compact }: { compact?: boolean }) {
   const containerRef = React.useRef<HTMLDivElement | null>(null);
+  const [tick, setTick] = React.useState(0);
 
-  // Static uptime data showing healthy system
+  // Animate the graph slightly for visual interest
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setTick(t => t + 1);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Dynamic uptime data with aesthetic variation
   const points = React.useMemo(() => {
     const data = [];
     for (let i = 0; i <= 100; i++) {
       const t = i;
-      // Simulate smooth uptime around 99.9%
-      const v = 0.999 + Math.sin(i * 0.2) * 0.001;
+      // Create visually interesting wave patterns
+      const base = 0.985;
+      const wave1 = Math.sin((i + tick) * 0.15) * 0.008;
+      const wave2 = Math.cos((i + tick) * 0.08) * 0.005;
+      const noise = (Math.sin(i * 0.5 + tick * 0.3) * 0.002);
+      const v = base + wave1 + wave2 + noise;
       data.push({ t, v });
     }
     return data;
-  }, []);
+  }, [tick]);
 
   const [size, setSize] = React.useState({ w: 300, h: 120 });
 

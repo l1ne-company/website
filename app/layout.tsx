@@ -55,6 +55,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: "L1NE Company - Containerless Orchestration System",
   description: "Bringing NixOS to the Cloud. Containerless orchestration with immutable infrastructure, reproducible builds, and cryptographic verification.",
+  icons: {
+    icon: "/icon.png",
+  },
   openGraph: {
     title: "L1NE Company - Containerless Orchestration System",
     description: "Bringing NixOS to the Cloud. Containerless orchestration with immutable infrastructure, reproducible builds, and cryptographic verification.",

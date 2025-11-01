@@ -6,13 +6,16 @@ import ProjectIdDisplay from '../components/ProjectIdDisplay';
 import ProjectDescription from '../components/ProjectDescription';
 import OperatorGroups from '../components/OperatorGroups';
 import TopOverview from '../components/TopOverview';
+import ProjectFilter from '../components/ProjectFilter';
+import { ProjectProvider } from '../src/contexts/ProjectContext';
 
 export default function Home() {
   return (
+    <ProjectProvider>
     <div className="h-screen overflow-hidden bg-black text-white flex flex-col">
       {/* Header */}
       <header className="p-4">
-        <h1 className="text-2xl tracking-tighter font-bold text-gray-500 text-spacing-px">L1NE COMPANY</h1>
+        <h1 className="text-2xl tracking-tighter font-bold text-gray-500 text-spacing-px">L1NE-COMPANY | FIXING CLOUD COMPUTING</h1>
         <p className="mt-1 text-[10px] leading-none text-gray-500">
           <a
             href="https://github.com/l1ne-company"
@@ -21,15 +24,6 @@ export default function Home() {
             className="hover:text-gray-400 italic underline"
           >
             GITHUB
-          </a>
-          <span className="px-1">•</span>
-          <a
-            href="https://github.com/l1ne-company/website"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-400 italic underline"
-          >
-            WEBSITE REPO
           </a>
         </p>
       </header>
@@ -66,8 +60,9 @@ export default function Home() {
 
             {/* Key Features (middle) */}
             <div className="min-h-0 overflow-hidden border border-[#352b19ff] bg-black border-b-0 flex flex-col">
-              <div className="flex items-center border-b-3 border-[#352b19ff]">
-                <h2 className="text-lg text-[#d79326ff] pl-2 pr-2">KEY FEATURES</h2>
+              <div className="flex items-center justify-between border-b-3 border-[#352b19ff] bg-[#130f04ff] px-2 py-1">
+                <h2 className="text-lg text-[#d79326ff]">KEY FEATURES</h2>
+                <ProjectFilter />
               </div>
               <div className="flex-1 min-h-0 overflow-auto">
                 <OperatorGroups />
@@ -90,9 +85,12 @@ export default function Home() {
             {/* Radar row with Global Q header and 10%/90% split below */}
             <div className="min-h-0 overflow-hidden flex flex-col">
               {/* Full-width header bar with yellow tab, like Monitoring */}
-              <div className="flex items-center" style={{ backgroundColor: '#130f04ff' }}>
+              <div className="flex items-center justify-between" style={{ backgroundColor: '#130f04ff' }}>
                 <div style={{ width: '8%', backgroundColor: '#c79325' }}>
                   <h2 className="pl-2 pr-2 font-bold text-black">TECH STACK</h2>
+                </div>
+                <div className="text-[9px] text-gray-500 italic pr-2">
+                  cloud agnostic because vendor lock-in is for cowards
                 </div>
               </div>
               {/* Two-column area: 10% ActionItems | 90% Radar */}
@@ -140,8 +138,9 @@ export default function Home() {
 
             {/* Features table (compact + mini text, capped height with internal scroll) */}
             <div className="min-h-0">
-              <div className="flex items-center bg-[#130f04ff]">
+              <div className="flex items-center justify-between bg-[#130f04ff] px-2 py-1">
                 <h2 className="bg-[#c79325] pl-2 pr-2 font-bold text-black">FEATURES</h2>
+                <ProjectFilter />
               </div>
               <div className="min-h-0 overflow-hidden">
                 <WorkTable compact mini maxHeight={390} columns={['id','capability','status']} />
@@ -178,5 +177,6 @@ export default function Home() {
         </div>
       </main>
     </div>
+    </ProjectProvider>
   );
 }
