@@ -6,58 +6,58 @@
 
 ## 🎯 Tagline
 
-**CONTAINERLESS ORCHESTRATION SYSTEM**
+**CLOUD INFRASTRUCTURE OPERATIONS**
 
-> "Bringing NixOS to the Cloud"
-
----
-
-## 📋 Sobre a L1NE
-
-**L1ne** é um framework de orquestração sem containers que traz todo o poder do **NixOS** para a nuvem. Permite infraestrutura reproduzível através da implantação de definições de sistema imutáveis e verificáveis ao invés de imagens de containers ou ambientes mutáveis.
-
-Construído com **computação determinística** e **configuração funcional**, a L1ne permite que sistemas escalem através de qualquer provedor por meio de provas criptográficas de integridade de build, transformando orquestração em uma propriedade do próprio sistema operacional.
-
-### Principais Características
-
-- **Infraestrutura Imutável:** Implante definições de sistema verificáveis, não containers
-- **Builds Reproduzíveis:** Provas criptográficas garantem integridade de build
-- **NixOS Nativo:** Poder completo da configuração declarativa do NixOS
-- **Pronto para Multi-Cloud:** Escale através de qualquer provedor de nuvem sem problemas
-- **Zero Containers:** Orquestração direta a nível de SO sem sobrecarga de containerização
+> "Fixing Cloud Computing at Scale"
 
 ---
 
-## 🎯 Missão
+## 📋 About L1NE
 
-Nossa missão é criar um **ecossistema de nuvem completo para NixOS** que mantenha todos os benefícios de reprodutibilidade, determinismo e design declarativo.
+**L1ne** is a cloud operations platform that fixes the fundamental issues with how cloud infrastructure is built, deployed, and managed. We bring deterministic, reproducible infrastructure to distributed systems—eliminating configuration drift, reducing operational complexity, and making cloud systems as reliable as local development environments.
 
-Com a L1ne, desenvolvedores podem construir, implantar e gerenciar sistemas NixOS nativamente na nuvem sem containers ou camadas complexas de orquestração. Nosso objetivo é tornar a nuvem tão previsível e confiável quanto o próprio Nix, onde cada ambiente é construído a partir da mesma fonte verificada.
+Built with **declarative configuration** and **deterministic provisioning**, L1ne enables infrastructure that scales consistently across any cloud provider through cryptographic verification of system integrity, transforming operations into a provable, auditable property of the infrastructure itself.
 
-### No que Acreditamos
+### Core Capabilities
 
-- Infraestrutura deve ser tão reproduzível quanto o software que ela executa
-- Determinismo supera complexidade em ambientes de produção
-- NixOS merece ferramentas cloud-first nativas
-- Containers são uma abstração que podemos transcender
+- **Reproducible Infrastructure:** Deploy verified configurations that work identically across environments
+- **Cryptographic Integrity:** Proofs guarantee infrastructure consistency and auditability
+- **Multi-Cloud Native:** AWS, GCP, Azure, on-premise—unified operations
+- **Zero Configuration Drift:** Deterministic state eliminates drift detection and remediation
+- **Observable & Auditable:** Every change is verifiable, every deployment is traceable
 
 ---
 
-## 🔮 Visão
+## 🎯 Mission
 
-Imaginamos um futuro onde **NixOS roda nativamente através da nuvem**, e infraestrutura é tão reproduzível quanto o software que ela hospeda.
+Our mission is to create a **complete cloud operations ecosystem** that keeps infrastructure deterministic, verifiable, and reliable at any scale.
 
-Neste mundo, sistemas escalam por referência, convergem por prova, e operam com segurança através de ambientes heterogêneos. O objetivo da L1ne é tornar infraestrutura global e multi-cloud totalmente determinística para que você possa **construir uma vez, verificar em qualquer lugar e executar em qualquer lugar**.
+With L1ne, engineers can build, deploy, and manage cloud systems natively with confidence, without configuration drift, manual remediation, or undocumented state. Our goal is to make cloud infrastructure as predictable and trustworthy as the code that runs on it—where every deployment is built from verified sources and every environment is auditable.
 
-### O Futuro que Estamos Construindo
+### What We Believe
 
-- **Escalar por Referência:** Sistemas se propagam através de referências endereçadas por conteúdo
-- **Convergir por Prova:** Verificação criptográfica substitui detecção de drift de configuração
-- **Segurança por Design:** Imutabilidade e determinismo criam sistemas inerentemente seguros
-- **NixOS Cloud Native:** Suporte de primeira classe para NixOS em todos os principais provedores de nuvem
-- **Developer First:** Workflows simples e declarativos que Simplesmente Funcionam™
+- Infrastructure should be as reproducible as the software it runs
+- Determinism beats complexity in production environments
+- Multi-cloud operations need unified, declarative tooling
+- Configuration drift is a symptom we can eliminate
 
-> _"A nuvem deveria ser tão determinística quanto sua máquina local."_
+---
+
+## 🔮 Vision
+
+We imagine a future where **cloud operations are deterministic by default**, and infrastructure is as auditable and trustworthy as source code.
+
+In this world, systems scale by reference, converge by proof, and operate securely across hybrid and multi-cloud environments. L1ne's goal is to make global, multi-cloud infrastructure fully deterministic so you can **build once, verify anywhere, and deploy everywhere**.
+
+### The Future We're Building
+
+- **Scale by Reference:** Systems propagate across regions by content-addressed references
+- **Converge by Proof:** Cryptographic verification replaces configuration drift detection
+- **Security by Design:** Determinism and auditability create inherently secure systems
+- **Cloud Operations Native:** First-class support for multi-cloud deployments
+- **Developer & Operator First:** Simple, declarative workflows that just work™
+
+> _"Cloud infrastructure should be as deterministic as your local machine."_
 
 ---
 
@@ -68,19 +68,18 @@ Neste mundo, sistemas escalam por referência, convergem por prova, e operam com
 
 ---
 
-## 🎨 Logo - Código Fonte (GLSL Shader)
+## 🎨 Logo - Code Source (GLSL Shader)
 
-A logo da L1ne é uma visualização 3D renderizada em tempo real usando técnicas de **raymarching** com GLSL shaders, criada com p5.js e WebGL.
+The L1ne logo is a real-time 3D visualization rendered using **raymarching** techniques with GLSL shaders, created with p5.js and WebGL.
 
-### Tecnologia
+### Technology
 
-- **p5.js** para renderização WebGL
-- **GLSL** para programação de shaders
-- **Raymarching** para renderização volumétrica em tempo real
-- Animação procedural com 8 barras flutuantes
-- Gradiente vertical roxo/azul
-- Linha diagonal característica
-
+- **p5.js** for WebGL rendering
+- **GLSL** for shader programming
+- **Raymarching** for real-time volumetric rendering
+- Procedural animation with 8 floating bars
+- Vertical purple/blue gradient
+- Characteristic diagonal line
 ### Código Completo do Shader
 
 ```glsl

@@ -53,8 +53,8 @@ const jetBrainsMono = localFont({
 export const metadata: Metadata = {
   // Helps Next generate absolute URLs for OG/Twitter images
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  title: "L1NE Company - Containerless Orchestration System",
-  description: "Bringing NixOS to the Cloud. Containerless orchestration with immutable infrastructure, reproducible builds, and cryptographic verification.",
+  title: "L1NE Company - Cloud Infrastructure Operations",
+  description: "Fix cloud computing. Deterministic, reproducible multi-cloud infrastructure with cryptographic integrity verification.",
   icons: {
     icon: "/icon.png",
   },
