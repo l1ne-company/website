@@ -5,83 +5,44 @@ import { useProject } from '../src/contexts/ProjectContext';
 
 const L1NE_FEATURES = [
   {
-    id: "F1",
-    title: "Immutable Infrastructure",
-    description: "Deploy verified system definitions, not containers",
+    id: "WIP-01",
+    title: "Cloud Operations",
+    description: "Working in Progress",
     project: "l1ne" as const,
   },
   {
-    id: "F2",
-    title: "Reproducible Builds",
-    description: "Cryptographic proofs guarantee build integrity",
+    id: "WIP-02",
+    title: "Infrastructure Automation",
+    description: "Working in Progress",
     project: "l1ne" as const,
   },
   {
-    id: "F3",
-    title: "NixOS Native",
-    description: "Full power of declarative NixOS configuration",
+    id: "WIP-03",
+    title: "Multi-Cloud Deployment",
+    description: "Working in Progress",
     project: "l1ne" as const,
   },
   {
-    id: "F4",
-    title: "Multi-Cloud Ready",
-    description: "Scale across any provider seamlessly",
+    id: "WIP-04",
+    title: "Security & Compliance",
+    description: "Working in Progress",
     project: "l1ne" as const,
   },
   {
-    id: "F5",
-    title: "Zero Containers",
-    description: "Direct OS-level orchestration without overhead",
+    id: "WIP-05",
+    title: "Observability",
+    description: "Working in Progress",
     project: "l1ne" as const,
   },
   {
-    id: "F6",
-    title: "Cryptographic Verification",
-    description: "Content-addressed system propagation",
+    id: "WIP-06",
+    title: "Performance",
+    description: "Working in Progress",
     project: "l1ne" as const,
   },
 ];
 
-const ALL_FOR_ONE_FEATURES = [
-  {
-    id: "F1",
-    title: "Crane-based Build Orchestration",
-    description: "Modular Nix flake builds with dependency splitting",
-    project: "all-for-one" as const,
-  },
-  {
-    id: "F2",
-    title: "ZK Proof System",
-    description: "Circom/Halo2/Arkworks proof generation & verification",
-    project: "all-for-one" as const,
-  },
-  {
-    id: "F3",
-    title: "Attic Binary Cache",
-    description: "Content-addressed .nar cache with S3 backend",
-    project: "all-for-one" as const,
-  },
-  {
-    id: "F4",
-    title: "GitHub Webhook Integration",
-    description: "Probot-based app for commit status updates",
-    project: "all-for-one" as const,
-  },
-  {
-    id: "F5",
-    title: "Cloud CI Orchestrator",
-    description: "Remote proof verification with fallback builds",
-    project: "all-for-one" as const,
-  },
-  {
-    id: "F6",
-    title: "Local-First Development",
-    description: "Build locally, generate proofs, deploy globally",
-    project: "all-for-one" as const,
-  },
-];
-
-const ALL_FEATURES = [...L1NE_FEATURES, ...ALL_FOR_ONE_FEATURES];
+const ALL_FEATURES = L1NE_FEATURES;
 
 export default function OperatorGroups() {
   const { selectedProject } = useProject();

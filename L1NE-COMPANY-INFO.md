@@ -433,7 +433,7 @@ Interface inspirada em painéis de controle de tráfego aéreo (Air Traffic Cont
 
 © 2025 L1ne Company. All rights reserved.
 
-**Built with NixOS • Powered by Determinism • Verified by Cryptography**
+**Fixing Cloud Computing • Working in Progress**
 
 ---
 

@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export type ProjectType = 'l1ne' | 'all-for-one';
+export type ProjectType = 'l1ne';
 
 interface ProjectContextType {
   selectedProject: ProjectType;

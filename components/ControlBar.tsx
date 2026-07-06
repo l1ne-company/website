@@ -4,19 +4,19 @@ import React from 'react';
 
 const DOC_SECTIONS = [
   {
-    title: "Getting Started",
-    description: "Installation and quick start guide",
-    url: "https://github.com/l1ne-company#-getting-started"
+    title: "Cloud Operations",
+    description: "Infrastructure automation and multi-cloud",
+    url: "https://github.com/l1ne-company"
   },
   {
-    title: "Architecture",
-    description: "System design and components",
-    url: "https://github.com/l1ne-company#architectural-tactics"
+    title: "Working in Progress",
+    description: "Current development status",
+    url: "https://github.com/l1ne-company"
   },
   {
-    title: "NixOS Integration",
-    description: "Declarative system configuration",
-    url: "https://github.com/l1ne-company#the-nix-model-of-declarative-systems"
+    title: "Documentation",
+    description: "Building and deployment guides",
+    url: "https://github.com/l1ne-company"
   },
   {
     title: "GitHub Repository",
@@ -45,7 +45,7 @@ export default function ControlBar() {
 
       <div className="mt-4 text-center">
         <div className="text-xs text-gray-500">
-          Built with NixOS • Powered by Determinism • Verified by Cryptography
+          Fixing Cloud Computing • Working in Progress
         </div>
       </div>
     </div>

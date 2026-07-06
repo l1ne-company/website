@@ -8,7 +8,6 @@ export default function ProjectFilter() {
 
   const projects: { id: ProjectType; label: string }[] = [
     { id: 'l1ne', label: 'L1NE' },
-    { id: 'all-for-one', label: 'ALL-FOR-ONE' },
   ];
 
   return (

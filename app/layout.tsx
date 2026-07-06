@@ -51,16 +51,15 @@ const jetBrainsMono = localFont({
 });
 
 export const metadata: Metadata = {
-  // Helps Next generate absolute URLs for OG/Twitter images
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: "L1NE Company - Cloud Infrastructure Operations",
-  description: "Fix cloud computing. Deterministic, reproducible multi-cloud infrastructure with cryptographic integrity verification.",
+  description: "Fix cloud computing. Working in Progress.",
   icons: {
     icon: "/icon.png",
   },
   openGraph: {
-    title: "L1NE Company - Containerless Orchestration System",
-    description: "Bringing NixOS to the Cloud. Containerless orchestration with immutable infrastructure, reproducible builds, and cryptographic verification.",
+    title: "L1NE Company",
+    description: "Fix cloud computing. Working in Progress.",
     type: "website",
     url: "/",
     siteName: "L1NE Company",
@@ -69,14 +68,14 @@ export const metadata: Metadata = {
         url: "/images/L1NE_OG.png",
         width: 2048,
         height: 1280,
-        alt: "L1NE Company - Containerless Orchestration",
+        alt: "L1NE Company",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "L1NE Company - Containerless Orchestration System",
-    description: "Bringing NixOS to the Cloud. Containerless orchestration with immutable infrastructure, reproducible builds, and cryptographic verification.",
+    title: "L1NE Company",
+    description: "Fix cloud computing. Working in Progress.",
     images: ["/images/L1NE_OG.png"],
   },
 };

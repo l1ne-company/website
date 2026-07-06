@@ -5,7 +5,7 @@ import React from "react";
 const TECH_CATEGORIES = [
   {
     category: "CORE",
-    items: ["NixOS", "Nix Flakes", "ZIG", "SystemD"],
+    items: ["Cloud Ops", "Infrastructure", "Automation", "Observability"],
   },
   {
     category: "CLOUD",
